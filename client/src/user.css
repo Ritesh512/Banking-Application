@@ -1,0 +1,257 @@
+/* profile */
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: #f2f2f2;
+    padding:20px;
+    padding-top: 30px;
+   
+}
+
+.profilepart1{
+  background-color: #fff;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);    
+  text-align: center;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.profilepart2{
+    height: 500px;
+    background-color: #f2f2f2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.profilePic{
+    margin-top: 20px;
+    border-radius:50%;
+    border: 3px solid rgba(211, 200, 200, 0.737);
+}
+
+.usergrey{
+  color:#777;
+  font-weight: 500;
+  font-size: 24px;
+  
+}
+
+.usergrey p{
+  margin:5px;
+}
+
+.cardImg{
+  margin-top: 30px;
+}
+
+
+.history{
+  /* height: 85vh; */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: scroll;
+    background-color: #fff;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    height: 500px;
+}
+
+ .scrollBlock{
+  /* overflow: hidden; */
+    height: 380;
+}
+
+/* .sticky {
+  position: fixed;
+  top: 0;
+}  */
+
+.history ul li{
+    display: inline-block;
+    border: 2px solid #cec1c1ce;
+    padding: 2px;
+    width: 180px;
+    font-size: 20px;
+}
+
+.benifici{
+    width: 500px;
+    /* height: 500px; */
+    margin:100px auto;
+    background-color: #f2f2f2;
+    border: 2px solid #14e0c2;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+.benifici h1{
+    margin-left: 25px;
+  }
+
+  .inputBox{
+    display: block;
+    margin:25px;
+    padding: 7px;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #14e0c2;
+    padding: 12px;
+  }
+
+  .List{
+    text-align: center;
+    margin-top:50px;
+    width: 100%;
+  }
+
+
+.List ul li{
+    display: inline-block;
+    border: 1px solid skyblue;
+    padding: 5px;
+    width: 330px;
+    font-size: 24px;
+  }
+  
+  .List ul{
+    margin: 0;
+  }
+
+  .search-input{
+    display: block;
+    margin:25px;
+    margin-left: 500px;
+    padding: 7px;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #14e0c2;
+    padding: 12px;
+  }
+
+  .product{
+    width: 500px;
+    margin:30px auto;
+    background-color: #f2f2f2;
+    border: 2px solid #14e0c2;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .history ul{
+    margin: 0;
+    padding-left: -10px;
+  }
+
+  /* balance */
+.part2container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap:5px;
+}
+
+  .balance{
+    background-color: #fff;
+    margin:20px;
+    margin-top:0;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 120px;
+  }
+
+  .balSmb{
+    font-weight: bold;
+    font-size: 32px;
+    color:#333;
+    /* padding-top:5px; */
+  }
+
+  .balance p{
+    padding:0;
+    margin: 0;
+    margin-top:10px;
+    /* font-size: 24px; */
+  }
+  .balgrey{
+    color:#777;
+    font-weight: 500;
+    font-size: 30px;
+  }
+
+  .historygrey{
+    color:#777;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  /* graph */
+  .graph{
+    background-color: #fff;
+    margin:20px;
+    margin-top: 0;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    height: 350px;
+  }
+
+  /* .graphImg{
+    margin-top: 3px;
+    height:170px;
+    width: 300px;
+  } */
+  .graph p{
+    margin-top:2px;
+    margin-bottom: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    color:#777;
+  }
+
+  /* hover */
+  .hoverblue:hover{
+    border: 1px solid rgb(109, 213, 247);
+    border-top: 0.5px solid rgb(109, 213, 247);
+    box-shadow: 0px 4px 6px -1px rgb(109, 213, 247);
+
+  }
+  .hovergreen:hover{
+    border: 1px solid rgb(109, 247, 120);
+    border-top: 0.5px solid rgb(109, 247, 120);
+    box-shadow: 0px 4px 6px -1px rgb(109, 247, 120);
+
+  }
+
+  .click{
+    position: absolute;
+    right:280px;
+    bottom: 300px;
+    /* background-color: #14e0c2; */
+    /* width: 100%; */
+    opacity: 0.5;
+  }
+
+  /* Change Password */
+  .changePasswod{
+    width: 500px;
+    margin:100px auto;
+    background-color: #f2f2f2;
+    border: 2px solid #14e0c2;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .changePasswod h1{
+    margin-left: 25px;
+  }
+
+  /* forgot Password */
+  .forgotPassword{
+    margin-right: 20px;
+    margin-top: -10px;
+    text-align: right;
+  }
+  .forgotPassword a{
+    text-decoration:none;
+  }

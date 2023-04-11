@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  height:100vh;
+}
+/* Navigation */
+
+.logo{
+  width:40px;
+  float:left;
+  margin-top: 8px;
+  margin-left:20px;
+}
+
+.nav-ul li{
+  display:inline-block;
+  padding:10px;
+}
+
+.nav-ul li a{
+  text-decoration: none;
+  color: #fff;
+  padding:5px;
+  font-weight: 500;
+}
+
+.nav-ul{
+  padding: 5px;
+  margin: 0;
+  background-color:#14e0c2;
+}
+
+.nav-right{
+  text-align: right;
+}
+
+.logout{
+  float:right;
+}
+
+/* Footer */
+.footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  width: 100%;
+  text-align: center;
+  background-color:#14e0c2;
+  font-size: 15px;
+  /* overflow: clip; */
+}
+
+/* Login */
+
+.login{
+  width: 500px;
+  margin:100px auto;
+  background-color: #f2f2f2;
+  border: 2px solid #14e0c2;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login h1{
+  margin-left: 25px;
+}
+
+.inputBox{
+  /* display: block; */
+  margin:25px;
+  padding: 7px;
+  width: 300px;
+  box-sizing: border-box;
+  /* border-radius: 10px; */
+  border: 1px solid #14e0c2;
+  padding: 12px;
+}
+
+.button{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 12px 24px;
+  text-decoration: none;
+  margin: 6px 24px;
+  border-radius: 5px;
+}
+
+/* register */
+.register{
+  height: 85vh;
+  background-color: #f2f2f2;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.register h1{
+  margin-left: 25px;
+}
+
+.error{
+  color:red;
+  margin-top:-20px;
+  display: block;
+  width: 100%;
+  margin-left: 170px;
+  /* margin-right: -10px; */
+}
+
+input[type="date"]{
+  background-color: #0080ff;
+  font-family: "Roboto Mono",monospace;
+  color: #ffffff;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+
+.gridSignUp{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.flexSignup{
+  display:grid;
+  grid-template-columns:1fr 4fr;
+  column-gap: 10px;
+  align-items:center;
+  
+}
+
+.flexSignup label{
+  margin-right:0;
+  padding-right:0 ;
+}
