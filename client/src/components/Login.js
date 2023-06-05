@@ -57,7 +57,7 @@ function Login(){
 		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 		auth1.signInWithPhoneNumber(num,verify).then((result) => {
 			setfinal(result);
-			alert("code sent")
+			alert("code sent");
 			setshow(true);
 		})
 			.catch((err) => {
@@ -69,6 +69,8 @@ function Login(){
     const ValidateOtp = () => {
 		if (otp === null || final === null)
 			return;
+        
+        
 		final.confirm(otp).then((result) => {
 			// success
             navigate("/");
@@ -96,7 +98,7 @@ function Login(){
                 onChange={Password} 
             />
             <button onClick={handleLogin} className="button">Login</button>
-            <p className='forgotPassword'><Link to="/changePassword">Forgot Password</Link></p>
+            {/* <p className='forgotPassword'><Link to="/forgot">Forgot Password</Link></p> */}
             <div id="recaptcha-container"></div>
             </div>
             <div style={{ display: show ? "block" : "none" }}>

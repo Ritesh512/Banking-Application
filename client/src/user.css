@@ -49,7 +49,7 @@
 
 .history{
   /* height: 85vh; */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden; 
   overflow-y: scroll;
     background-color: #fff;
     box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.2);
@@ -58,19 +58,10 @@
     height: 500px;
 }
 
- .scrollBlock{
-  /* overflow: hidden; */
-    height: 380;
-}
-
-/* .sticky {
-  position: fixed;
-  top: 0;
-}  */
 
 .history ul li{
     display: inline-block;
-    border: 2px solid #cec1c1ce;
+    /* border: 2px solid #cec1c1ce; */
     padding: 2px;
     width: 180px;
     font-size: 20px;
@@ -181,9 +172,47 @@
   }
 
   .historygrey{
-    color:#777;
-    font-weight: 500;
-    font-size: 18px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px;
+  }
+
+  .sticky{
+    position:sticky;
+    top:0;  
+    padding-top: 10px;
+    background-color: #14e0c2;
+    color: #fff;
+  }
+
+  
+  .sticky ul{
+    padding-left: 0;
+  }
+  
+  .sticky ul li{
+    width: 33.3%;
+  }
+  .sticky table{
+    width: 100%;
+  }
+
+  .histroyOverflow{
+    height:500px;
+  }
+  
+  .histroyOverflow table{
+    width: 100%;
+    
+  }
+  .histroyOverflow ul{
+    padding-left: 0;
+  }
+
+  .histroyOverflow ul li{
+    border: 2px solid #cec1c1ce;
+    width: 33.3%;
   }
 
   /* graph */
@@ -255,3 +284,6 @@
   .forgotPassword a{
     text-decoration:none;
   }
+
+  /* Credit Card */
+  

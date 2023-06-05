@@ -17,7 +17,6 @@ function Nav(){
         />
             { auth?<ul className='nav-ul'>
                 <li><Link to="/">Home</Link></li>
-
                 <li><Link to="/addBeneficiary">Add Beneficiary</Link></li>
                 <li><Link to="/sendMoney">Send Money</Link></li>
                 <li className="logout"><Link onClick={logout} to="/SignUp">Logout ({JSON.parse(auth).name})</Link></li>
@@ -26,7 +25,7 @@ function Nav(){
             :
             <ul className='nav-ul nav-right'>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/signup">Signup</Link></li>
+                <li><Link to="/Signup">Signup</Link></li>
             </ul>}
         </div>
     );

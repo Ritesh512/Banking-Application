@@ -1,9 +1,9 @@
 import React,{ useEffect, useState } from 'react';
 import { useNavigate,useParams } from 'react-router-dom';
+import PaymentForm from './CreditCard';
 import { FaRupeeSign } from "react-icons/fa";
 import 'chart.js/auto';
 import { Doughnut } from 'react-chartjs-2';
-
 
 
 function Profile(){
@@ -36,11 +36,12 @@ function Profile(){
         });
             result = await result.json();
             if(result.result===true){
+            
                 setCheckPassdate(true);
             }else{
                 setCheckPassdate(false);
             }
-        },10000);
+        },1000);
         getDetail();
        },[]);
 
@@ -95,10 +96,11 @@ function Profile(){
                 <p>{user.mob}</p>
             </div>
             <div>
-                <img 
+                {/* <img 
                     src={require("../credit.png")}
                     className='cardImg'
-                />
+                /> */}
+                <PaymentForm />
             </div>
         </section>
         <section className='profilepart2'>
@@ -108,42 +110,38 @@ function Profile(){
                         <p className='balgrey'>Balance</p>
                         <p className='balSmb'><span >{FaRupeeSign()}</span>{userbal.balance}</p>
                     </div>
-                    {/* <div className='balance hoverblue'>
-                        <p className='balgrey'>Balance</p>
-                        <p className='balSmb'><span >{FaRupeeSign()}</span>{userbal.balance}</p>
-                    </div> */}
                     <div className='graph hovergreen'>
                         <p>Expenditure</p>
-                        {/* <img 
-                            src={require("../chart.png")}
-                            className='graphImg'
-                        /> */}
+
                         <Doughnut data={data} />
 
                     </div>
                 </div>
             </div>
             <div className="history ">
-                <div >
+                <div className='sticky'>
                     <p className='historygrey'>History</p>
-                    <ul>
-                        <li>Date</li>
-                        <li>Send</li>
-                        <li>Recieved</li>
-                    </ul>
+                    <table>
+                        <ul>
+                            <li>Date</li>
+                            <li>Send</li>
+                            <li>Recieved</li>
+                        </ul>
+                    </table>
                 </div>
-                
-           
+                <div className='histroyOverflow'>
                     {
                         len>0? userbal.date.map(function(item,index){
-                            if(index<20){
+                            if(index<100){
                             return (
-                                <ul key={item._id}>
-                                    <li>{item}</li>
-                                    <li>{userbal.send[index]}</li>
-                                    <li>{userbal.received[index]}</li>
-                            
-                                </ul>
+                                <table>
+                                    <ul key={item._id}>
+                                        <li>{item}</li>
+                                        <li>{userbal.send[index]}</li>
+                                        <li>{userbal.received[index]}</li>
+                                
+                                    </ul>
+                                </table>
                             );
                             }
                             {/* return <h1 className="click">Click here </h1>; */}
@@ -153,6 +151,7 @@ function Profile(){
                         <h1>No data found</h1>
                         </div>
                     }
+                </div>
                     
             </div>
         </section>

@@ -27,6 +27,7 @@ function Signup(){
     const navigate =  useNavigate();
     const [mynumber, setnumber] = useState("");
     const [user] = useAuthState(auth1);
+    
 
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var phoneno = /^\d{1,10}$/;

@@ -5,7 +5,9 @@ import { firebase, auth1 } from './firebase';
 
 function SendMoney(){
     const navigate =  useNavigate("");
+    // const [userbal,setUserBal] = useState(0);
     const [amount,setAmount] = useState("");
+    const [bal,setbal] = useState(0);
     const [password,setPassword] = useState("");
     const [show, setshow] = useState(false);
     const [otp, setotp] = useState('');
@@ -13,6 +15,11 @@ function SendMoney(){
     const param = useParams();
     let user = JSON.parse(localStorage.getItem("user"));
     console.log(param.id);
+    // let bal = 0;
+
+    useEffect(()=>{
+        checkbal();
+       },[]);
 
    function Amount(event){
     setAmount(event.target.value);
@@ -49,21 +56,45 @@ function SendMoney(){
         })
     }
 
-
-    async function submit(){
-        let accountNo = param.id;
-        let result=await fetch(`http://localhost:8000/sendAmount/${user._id}`,{
-            method: "post",
-            body:JSON.stringify({accountNo,amount,password}),
-            headers:{
-                'Content-Type': 'application/json',
+    async function checkbal(){
+        let result1=await fetch(`http://localhost:8000/getDetails/${user._id}`,{
+            headers: {
                 authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
             }
         });
-        result = await result.json();
-        // console.warn(result);
-        // console.log(user.mob);
-        verify(user.mob);
+        result1 = await result1.json();
+        if(result1){
+            setbal(result1.balance);
+            console.log("Ritesh:::",bal);
+        }
+    }
+    async function submit(){
+
+        // if(user.)
+        if(user.profilePassword===password){
+            if(Number(bal)>=Number(amount) && Number(amount)>=0){
+                let accountNo = param.id;
+                let result=await fetch(`http://localhost:8000/sendAmount/${user._id}`,{
+                    method: "post",
+                    body:JSON.stringify({accountNo,amount,password}),
+                    headers:{
+                        'Content-Type': 'application/json',
+                        authorization:`bearer ${JSON.parse(localStorage.getItem("token"))}`
+                    }
+                });
+                result = await result.json();
+                // console.warn(result);
+                // console.log(user.mob);
+                verify(user.mob);
+            }else{
+                alert("Your Account Balance is Low");
+                navigate("/");
+            }
+        }else{
+            alert("Please enter Correct password");
+            navigate("/");
+        }
+        
     }
 
     return (

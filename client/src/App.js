@@ -10,9 +10,14 @@ import AddBenifi from './components/AddBenifi';
 import Beneficiary from './components/Beneficiary';
 import SendMoney from './components/SendMoney';
 import ChangePassword from './components/ChangePassword';
+import Forgot from './components/Forgot';
 import './App.css';
 import './user.css'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
+// window.onbeforeunload = function() {
+//   localStorage.clear();
+// }
 
 
 
@@ -29,11 +34,12 @@ function App() {
           <Route path="/sendMoney" element={<Beneficiary />}/>
           <Route path="/SendMoney/:id" element={<SendMoney />}/>
           <Route path="/logout" element={<h1>Logout</h1>}/>
+          <Route path="/changePassword" element={<ChangePassword />}/>
         </Route>
           
           <Route path="/login" element={<Login />}/>
           <Route path="/Signup" element={<Signup />}/>
-          <Route path="/changePassword" element={<ChangePassword />}/>
+          {/* <Route path="/forgot" element={<Forgot />}/> */}
         </Routes>
       </BrowserRouter>
       <Footer />

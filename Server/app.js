@@ -68,10 +68,10 @@ app.post("/login",async function(req, res){
         let user = await User.findOne({email:req.body.email});
         // console.log(user.password);
         if(user){
-            console.log(bcrypt.compareSync(req.body.password, user.password));
+            // console.log(bcrypt.compareSync(req.body.password, user.password));
             if(bcrypt.compareSync(req.body.password, user.password)){
                 console.log("Click1");
-                Jwt.sign({user},jwtKey,{expiresIn:"2h"},(err,token)=>{
+                Jwt.sign({user},jwtKey,{expiresIn:"1h"},(err,token)=>{
                     if(err) {
                         res.send({result:"Something Went wrong!"});
                     }
@@ -93,6 +93,7 @@ app.post("/login",async function(req, res){
     }
 });
 
+//not in use
 app.post("/addAmount/:id", verifyToken ,async function(req,res){
     let id = req.params.id;
     let user = await UserAmount.findOne({userId:id});
@@ -126,6 +127,7 @@ app.get("/getDetails/:id",verifyToken, async function(req, res){
         res.send({result:"No user Found"});
     }
 });
+
 
 
 app.post("/sendAmount/:id",async function(req, res){
@@ -176,11 +178,10 @@ app.post("/sendAmount/:id",async function(req, res){
     }
 
     if(ans===2){
-        res.send({result:"SuucessFull"});
+        res.send({result:"SuccessFull"});
     }else{
         res.send({result:"Failed"});
     }
-
     
 });
 
@@ -219,8 +220,6 @@ app.post("/addBeneficiary/:id",verifyToken,async function (req, res) {
         }
         
     }
-    
-    
 
 });
 
@@ -248,6 +247,18 @@ app.get("/search/:key/:id",verifyToken,async function(req, res){
     res.send(result);
 });
 
+app.post("/checkUser",async function(req, res) {
+    let acc = req.body.account;
+    // let password = req.body.newPassword;
+    let user = await User.findOne({_id:acc}); 
+    if(user){
+        user = await user.toObject();
+        res.send({result:true,user});
+    }else{
+        res.send({result:false});
+    }
+})
+
 app.post("/changePassword/:id",verifyToken,async function(req, res) {
     const user = await User.findOne({_id:req.params.id});
     // console.log(user.password);
@@ -270,8 +281,8 @@ app.post("/changePassword/:id",verifyToken,async function(req, res) {
 });
 
 app.get("/checkPassdate/:id",async function(req,res){
-    // console.log(req.params.id);
-    let days = 2;
+    console.log(req.params.id);
+    let days = 1;
     let user = await User.findOne({_id:req.params.id});
     const createdAt = new Date(user.createdAt);
 
@@ -280,11 +291,11 @@ app.get("/checkPassdate/:id",async function(req,res){
     // console.log((createdAt.getTime() + (30 * 24 * 60 * 60 * 1000))-Date.now());
     // console.log(createdAt.getTime() + (30 * 24 * 60 * 60 * 1000) );
 
-    if(createdAt.getTime() + (days * 24 * 60 * 60 * 1000) <Date.now()){
-        // console.log("over");
+    if(createdAt.getTime() + (days* 12 * 60 * 60 * 1000) <Date.now()){
+        console.log("over");
         res.send({result:true});
     }else{
-        // console.log("Yet To over");
+        console.log("Yet To over");
         res.send({result:false});
     }
 });
