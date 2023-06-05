@@ -1,9 +1,10 @@
 ## Project Title - Banking-Application
-#This application is similar to an online banking application where user can create account, send money
+```
+This application is similar to an online banking application where user can create account, send money
 to beneficiaries. For security concern OTP verification, profile password and JWT token concept were
 implemented.
-#The application is build using React Js, NodeJs, Express and MongoDb
-
+The application is build using React Js, NodeJs, Express and MongoDb
+```
 # Aim:
  ```
 Develop a website banking application using multifold security features.
