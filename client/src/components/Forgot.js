@@ -66,7 +66,7 @@ function Forgot(){
             alert("New Password and Confirm New Password must match");
             return false;
         }
-        let result=await fetch(`http://localhost:8000/checkUser`,{
+        let result=await fetch(`/checkUser`,{
             method: "post",
             body:JSON.stringify({account,newPassword}),
             headers:{

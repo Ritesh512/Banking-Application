@@ -84,7 +84,7 @@ function Signup() {
     const enteredDate = new Date(event.target.value);
     const currentDate = new Date();
     const age = currentDate.getFullYear() - enteredDate.getFullYear();
-    console.log(typeof(age))
+    console.log(typeof age);
 
     if (age < 18) {
       setErr(true);
@@ -135,7 +135,7 @@ function Signup() {
       return false;
     }
 
-    let result = await fetch("http://localhost:8000/register", {
+    let result = await fetch("/register", {
       method: "post",
       body: JSON.stringify({
         name,
@@ -275,7 +275,9 @@ function Signup() {
                 onChange={Dob}
               />
             </div>
-            {error && <span className="error">Age should be greater than 18</span>}
+            {error && (
+              <span className="error">Age should be greater than 18</span>
+            )}
           </div>
 
           <div>
