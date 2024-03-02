@@ -23,18 +23,17 @@ Develop a website banking application using multifold security features.
 
 
 # System Architecture
-![BankingApp](https://github.com/Ritesh512/Banking-Application/assets/89989932/b88ab89d-b9c2-460e-9a8b-62dfdd8ac170)
+![BankingApp](https://github.com/Ritesh512/Banking-Application/assets/89989932/4cca6eb2-b0e6-47e6-9479-2a11703e222b)
 
 
-# Results
 
 | Title | Image    |
 --- | --- | 
-| Dashboard |<img width="960" alt="SS-1" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/50756ded-0c17-4cf8-a2f1-e059657b8d2e">|
-| Add Beneficiary |<img width="960" alt="SS-4" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/3d615ad9-af66-430a-ac38-041616c167ed">|
-| Send Money |<img width="959" alt="SS-2" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/b30ccada-8614-49da-a17b-63a3bbecde3d">|
-| Registration Page |<img width="960" alt="SS-3" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/44ffd971-2033-4865-84b7-93e2cec73581">|
-| Login Page |<img width="960" alt="SS-3" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/8e9ae582-817f-44bf-bb99-ab8977c5a49f">|
+| Dashboard |<img width="960" alt="SS-1" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/b0d7956e-65b7-49b3-ab15-371306900321">|
+| Add Beneficiary |<img width="960" alt="SS-4" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/93343aaf-11e4-4f3e-a2b5-6c46d074f10c">|
+| Send Money |<img width="959" alt="SS-2" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/f0e46bd8-0d88-4a6d-8424-7ecc4915ff10">|
+| Registration Page |<img width="960" alt="SS-3" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/9ab9e246-9fd3-4f41-b9e4-81f5957543ec">|
+| Login Page |<img width="960" alt="SS-3" src="https://github.com/Ritesh512/Banking-Application/assets/89989932/60fcad32-980f-460f-aaed-bfab559fad98">|
 
 # Video
 
