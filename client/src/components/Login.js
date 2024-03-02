@@ -60,6 +60,8 @@ function Login() {
       })
       .catch((err) => {
         alert(err);
+        localStorage.clear();
+        navigate("/Signup");
         window.location.reload();
       });
   }
