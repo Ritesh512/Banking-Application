@@ -1,2 +1,7 @@
-const mongoose = require('mongoose');
-mongoose.connect("mongodb://0.0.0.0:27017/bankingApp");
+const dotenv = require("dotenv");
+dotenv.config();
+
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE).then(() => {
+  console.log("Database connected successfully");
+});
